@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "67bc78642f0554e650f88e58"
+  },
+  "name": "Adrian Bischoff",
+  "age": "16",
+  "birthdate": {
+    "$date": "2008-04-07T00:00:00.000Z"
+  }
+}]
