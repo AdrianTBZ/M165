@@ -6,7 +6,7 @@
 
 ## authSource=admin
 
-Der User verbindet sich mit der Admin Datenbank. Dies wird so gemacht, weil die Admin Datenbank als standart Authentifizierungsdatenbank verwendet wird.
+Der User soll sich mit der Admin Datenbank verbinden, weil dort der User erstellt wurde. Dies wird so gemacht, weil die Admin Datenbank als standart Authentifizierungsdatenbank verwendet wird.
 
 ## Sed Befehle
 
