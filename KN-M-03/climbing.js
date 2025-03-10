@@ -18,36 +18,6 @@ const hall1Id = ObjectId();
 const hall2Id = ObjectId();
 const hall3Id = ObjectId();
 
-/*
-db.Equipment.insertMany([
-    {
-        _id: equipment1Id,
-        typ: "Kletterschuhe",
-        price: 129.99
-    },
-    {
-        _id: equipment2Id,
-        typ: "Klettergurt",
-        price: 79.99
-    },
-    {
-        _id: equipment3Id,
-        typ: "Karabiner",
-        price: 14.99
-    },
-    {
-        _id: equipment4Id,
-        typ: "Chalk Bag",
-        price: 19.99
-    },
-    {
-        _id: equipment5Id,
-        typ: "Seil 60m",
-        price: 159.99
-    }
-]);
-*/
-
 db.Route.insertOne({
     _id: route1Id,
     name: "Der Überhang",
@@ -87,20 +57,17 @@ db.ClimbingHall.insertMany([
         adress: "Klosterstrasse 17, 8406 Winterthur",
         availableEquipment: [
             {
-        _id: ObjectId(),
-        id: equipment1Id,
+        id: equipment1h1Id,
         typ: "Kletterschuhe",
         price: 5.00
     },
     {
-        _id: ObjectId(),
-        id: equipment2Id,
+        id: equipmenth12Id,
         typ: "Klettergurt",
         price: 4.00
     },
     {
-        _id: ObjectId(),
-        id: equipment4Id,
+        id: equipmenth14Id,
         typ: "Chalk Bag",
         price: 3.00
     }
@@ -113,26 +80,22 @@ db.ClimbingHall.insertMany([
         adress: "Aathalstrasse 84, 8610 Uster",
         availableEquipment: [
             {
-        _id: ObjectId(),
-        id: equipment1Id,
+        id: equipmenth21Id,
         typ: "Kletterschuhe",
         price: 5.00
     },
     {
-        _id: ObjectId(),
-        id: equipment2Id,
+        id: equipmenth22Id,
         typ: "Klettergurt",
         price: 4.00
     },
     {
-        _id: ObjectId(),
-        id: equipment3Id,
+        id: equipmenth23Id,
         typ: "Karabiner",
         price: 2.50
     },
     {
-        _id: ObjectId(),
-        id: equipment5Id,
+        id: equipmenth25Id,
         typ: "Seil 60m",
         price: 8.00
     },
@@ -145,32 +108,27 @@ db.ClimbingHall.insertMany([
         adress: "Zürcherstrasse 109, 8952 Schlieren",
         availableEquipment: [
             {
-        _id: ObjectId(),
-        id: equipment1Id,
+        id: equipmenth31Id,
         typ: "Kletterschuhe",
         price: 5.00
     },
     {
-        _id: ObjectId(),
-        id: equipment2Id,
+        id: equipmenth32Id,
         typ: "Klettergurt",
         price: 4.00
     },
     {
-        _id: ObjectId(),
-        id: equipment3Id,
+        id: equipmenth33Id,
         typ: "Karabiner",
         price: 2.50
     },
     {
-        _id: ObjectId(),
-        id: equipment4Id,
+        id: equipmenth34Id,
         typ: "Chalk Bag",
         price: 3.00
     },
     {
-        _id: ObjectId(),
-        id: equipment5Id,
+        id: equipmenth35Id,
         typ: "Seil 60m",
         price: 8.00
     }
@@ -186,17 +144,17 @@ db.Climbers.insertMany([
         age: 28,
         equipmentID: [
             {
-        _id: equipment1Id,
+        _id: equipmentc11Id,
         typ: "Kletterschuhe",
         price: 129.99
     },
     {
-        _id: equipment2Id,
+        _id: equipmentc12Id,
         typ: "Klettergurt",
         price: 79.99
     },
     {
-        _id: equipment4Id,
+        _id: equipmentc14Id,
         typ: "Chalk Bag",
         price: 19.99
     },
@@ -213,7 +171,6 @@ db.Climbers.insertMany([
                 difficulty: "5c"
             }
         ],
-        equipment: [equipment1Id, equipment2Id, equipment4Id],
         rent: [equipment3Id]
     },
     {
@@ -222,12 +179,12 @@ db.Climbers.insertMany([
         age: 32,
         equipmentID: [
             {
-        _id: equipment1Id,
+        _id: equipmentc21Id,
         typ: "Kletterschuhe",
         price: 129.99
     },
     {
-        _id: equipment2Id,
+        _id: equipmentc22Id,
         typ: "Klettergurt",
         price: 79.99
     },
@@ -239,7 +196,6 @@ db.Climbers.insertMany([
                 difficulty: "7b"
             }
         ],
-        equipment: [equipment1Id, equipment2Id],
         rent: [equipment4Id, equipment5Id]
     },
     {
@@ -248,7 +204,7 @@ db.Climbers.insertMany([
         age: 25,
         equipmentID: [
             {
-        _id: equipment1Id,
+        _id: equipmentc31Id,
         typ: "Kletterschuhe",
         price: 129.99
     },
@@ -270,7 +226,6 @@ db.Climbers.insertMany([
                 difficulty: "6a+"
             }
         ],
-        equipment: [equipment1Id],
         rent: [equipment2Id, equipment3Id]
     },
     {
@@ -279,22 +234,22 @@ db.Climbers.insertMany([
         age: 29,
         equipmentID: [
             {
-        _id: equipment1Id,
+        _id: equipmentc41Id,
         typ: "Kletterschuhe",
         price: 129.99
     },
     {
-        _id: equipment2Id,
+        _id: equipmentc42Id,
         typ: "Klettergurt",
         price: 79.99
     },
     {
-        _id: equipment3Id,
+        _id: equipmentc43Id,
         typ: "Karabiner",
         price: 14.99
     },
     {
-        _id: equipment4Id,
+        _id: equipmentc44Id,
         typ: "Chalk Bag",
         price: 19.99
     },
@@ -311,42 +266,6 @@ db.Climbers.insertMany([
                 difficulty: "7b"
             }
         ],
-        equipment: [equipment1Id, equipment2Id, equipment3Id, equipment4Id],
         rent: []
     }
 ]);
-
-/*
-db.availableEquipment.insertMany([
-    {
-        _id: ObjectId(),
-        id: equipment1Id,
-        typ: "Kletterschuhe",
-        price: 5.00
-    },
-    {
-        _id: ObjectId(),
-        id: equipment2Id,
-        typ: "Klettergurt",
-        price: 4.00
-    },
-    {
-        _id: ObjectId(),
-        id: equipment3Id,
-        typ: "Karabiner",
-        price: 2.50
-    },
-    {
-        _id: ObjectId(),
-        id: equipment4Id,
-        typ: "Chalk Bag",
-        price: 3.00
-    },
-    {
-        _id: ObjectId(),
-        id: equipment5Id,
-        typ: "Seil 60m",
-        price: 8.00
-    }
-]);
-*/
