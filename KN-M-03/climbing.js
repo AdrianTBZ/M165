@@ -18,6 +18,7 @@ const hall1Id = ObjectId();
 const hall2Id = ObjectId();
 const hall3Id = ObjectId();
 
+/*
 db.Equipment.insertMany([
     {
         _id: equipment1Id,
@@ -45,12 +46,14 @@ db.Equipment.insertMany([
         price: 159.99
     }
 ]);
+*/
 
 db.Route.insertOne({
     _id: route1Id,
     name: "Der Überhang",
     length: 15.5,
-    difficulty: "6a+"
+    difficulty: "6a+",
+    hallID: "hall1Id"
 });
 
 db.Route.insertMany([
@@ -58,19 +61,22 @@ db.Route.insertMany([
         _id: route2Id,
         name: "Direkter Weg",
         length: 12.0,
-        difficulty: "5c"
+        difficulty: "5c",
+        hallID: "hall1Id"
     },
     {
         _id: route3Id,
         name: "Dächer Route",
         length: 18.0,
-        difficulty: "7b"
+        difficulty: "7b",
+        hallID: "hall2Id"
     },
     {
         _id: route4Id,
         name: "Anfänger Kante",
         length: 10.0,
-        difficulty: "4b"
+        difficulty: "4b",
+        hallID: "hall3Id"
     }
 ]);
 
@@ -79,21 +85,96 @@ db.ClimbingHall.insertMany([
         _id: hall1Id,
         name: "6a plus",
         adress: "Klosterstrasse 17, 8406 Winterthur",
-        availableEquipment: [equipment1Id, equipment2Id, equipment4Id],
+        availableEquipment: [
+            {
+        _id: ObjectId(),
+        id: equipment1Id,
+        typ: "Kletterschuhe",
+        price: 5.00
+    },
+    {
+        _id: ObjectId(),
+        id: equipment2Id,
+        typ: "Klettergurt",
+        price: 4.00
+    },
+    {
+        _id: ObjectId(),
+        id: equipment4Id,
+        typ: "Chalk Bag",
+        price: 3.00
+    }
+        ],
         climbers: [climber1Id, climber2Id, climber3Id]
     },
     {
         _id: hall2Id,
         name: "GRIFFIG",
         adress: "Aathalstrasse 84, 8610 Uster",
-        availableEquipment: [equipment1Id, equipment2Id, equipment3Id, equipment5Id],
+        availableEquipment: [
+            {
+        _id: ObjectId(),
+        id: equipment1Id,
+        typ: "Kletterschuhe",
+        price: 5.00
+    },
+    {
+        _id: ObjectId(),
+        id: equipment2Id,
+        typ: "Klettergurt",
+        price: 4.00
+    },
+    {
+        _id: ObjectId(),
+        id: equipment3Id,
+        typ: "Karabiner",
+        price: 2.50
+    },
+    {
+        _id: ObjectId(),
+        id: equipment5Id,
+        typ: "Seil 60m",
+        price: 8.00
+    },
+        ],
         climbers: [climber1Id, climber4Id]
     },
     {
         _id: hall3Id,
         name: "Boulderlounge",
         adress: "Zürcherstrasse 109, 8952 Schlieren",
-        availableEquipment: [equipment1Id, equipment2Id, equipment3Id, equipment4Id, equipment5Id],
+        availableEquipment: [
+            {
+        _id: ObjectId(),
+        id: equipment1Id,
+        typ: "Kletterschuhe",
+        price: 5.00
+    },
+    {
+        _id: ObjectId(),
+        id: equipment2Id,
+        typ: "Klettergurt",
+        price: 4.00
+    },
+    {
+        _id: ObjectId(),
+        id: equipment3Id,
+        typ: "Karabiner",
+        price: 2.50
+    },
+    {
+        _id: ObjectId(),
+        id: equipment4Id,
+        typ: "Chalk Bag",
+        price: 3.00
+    },
+    {
+        _id: ObjectId(),
+        id: equipment5Id,
+        typ: "Seil 60m",
+        price: 8.00
+    }
+        ],
         climbers: [climber2Id, climber3Id, climber4Id]
     }
 ]);
@@ -103,7 +184,23 @@ db.Climbers.insertMany([
         _id: climber1Id,
         name: "Marco Matteo",
         age: 28,
-        equipmentID: [equipment1Id, equipment2Id, equipment4Id],
+        equipmentID: [
+            {
+        _id: equipment1Id,
+        typ: "Kletterschuhe",
+        price: 129.99
+    },
+    {
+        _id: equipment2Id,
+        typ: "Klettergurt",
+        price: 79.99
+    },
+    {
+        _id: equipment4Id,
+        typ: "Chalk Bag",
+        price: 19.99
+    },
+        ],
         completedRoutes: [
             {
                 routeID: route1Id,
@@ -123,7 +220,18 @@ db.Climbers.insertMany([
         _id: climber2Id,
         name: "Sandro Kossel",
         age: 32,
-        equipmentID: [equipment1Id, equipment2Id],
+        equipmentID: [
+            {
+        _id: equipment1Id,
+        typ: "Kletterschuhe",
+        price: 129.99
+    },
+    {
+        _id: equipment2Id,
+        typ: "Klettergurt",
+        price: 79.99
+    },
+        ],
         completedRoutes: [
             {
                 routeID: route3Id,
@@ -138,7 +246,13 @@ db.Climbers.insertMany([
         _id: climber3Id,
         name: "Mario Traub",
         age: 25,
-        equipmentID: [equipment1Id],
+        equipmentID: [
+            {
+        _id: equipment1Id,
+        typ: "Kletterschuhe",
+        price: 129.99
+    },
+        ],
         completedRoutes: [
             {
                 routeID: route4Id,
@@ -163,7 +277,28 @@ db.Climbers.insertMany([
         _id: climber4Id,
         name: "Colin Piguet",
         age: 29,
-        equipmentID: [equipment1Id, equipment2Id, equipment3Id, equipment4Id],
+        equipmentID: [
+            {
+        _id: equipment1Id,
+        typ: "Kletterschuhe",
+        price: 129.99
+    },
+    {
+        _id: equipment2Id,
+        typ: "Klettergurt",
+        price: 79.99
+    },
+    {
+        _id: equipment3Id,
+        typ: "Karabiner",
+        price: 14.99
+    },
+    {
+        _id: equipment4Id,
+        typ: "Chalk Bag",
+        price: 19.99
+    },
+        ],
         completedRoutes: [
             {
                 routeID: route2Id,
@@ -181,6 +316,7 @@ db.Climbers.insertMany([
     }
 ]);
 
+/*
 db.availableEquipment.insertMany([
     {
         _id: ObjectId(),
@@ -213,3 +349,4 @@ db.availableEquipment.insertMany([
         price: 8.00
     }
 ]);
+*/
