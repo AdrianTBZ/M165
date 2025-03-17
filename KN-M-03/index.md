@@ -2,15 +2,15 @@
 
 ## [Climbing.js](climbing.js)
 
+![Aufgabe A](Images/Aufgabe_A.png)
+
 # Aufgabe B
 
 ## Alle Collections löschten
 ```
-db.Equipment.drop();
 db.Route.drop();
 db.ClimbingHall.drop();
 db.Climbers.drop();
-db.availableEquipment.drop();
 ```
 
 ## Daten teilweise löschten
@@ -25,10 +25,15 @@ db.Route.deleteMany({
 });
 ```
 
+![delete_one](Images/delete_one.png)
+![delete_many](Images/delete_many.png)
+
 # Aufgabe C
 
 ## [Find.js](find.js)
+![find](Images/find.png)
 
 # Aufgabe D
 
 ## [Update.js](update.js)
+![update](Images/update.png)

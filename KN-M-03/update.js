@@ -1,11 +1,3 @@
-db.Equipment.updateOne(
-    { _id: equipment1Id },
-    { 
-        $mul: { price: 1.1 },
-        $set: { lastUpdated: new Date() }
-    }
-);
-
 db.Climbers.updateMany(
     { 
         $or: [

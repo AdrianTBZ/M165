@@ -1,4 +1,27 @@
-const equipment1Id = ObjectId();
+const equipment1h1Id = ObjectId();
+const equipmenth12Id = ObjectId();
+const equipmenth14Id = ObjectId();
+const equipmenth21Id = ObjectId();
+const equipmenth22Id = ObjectId();
+const equipmenth23Id = ObjectId();
+const equipmenth25Id = ObjectId();
+const equipmenth31Id = ObjectId();
+const equipmenth32Id = ObjectId();
+const equipmenth33Id = ObjectId();
+const equipmenth34Id = ObjectId();
+const equipmenth35Id = ObjectId();
+
+const equipmentc11Id = ObjectId();
+const equipmentc12Id = ObjectId();
+const equipmentc14Id = ObjectId();
+const equipmentc21Id = ObjectId();
+const equipmentc22Id = ObjectId();
+const equipmentc31Id = ObjectId();
+const equipmentc41Id = ObjectId();
+const equipmentc42Id = ObjectId();
+const equipmentc43Id = ObjectId();
+const equipmentc44Id = ObjectId();
+
 const equipment2Id = ObjectId();
 const equipment3Id = ObjectId();
 const equipment4Id = ObjectId();
@@ -23,7 +46,7 @@ db.Route.insertOne({
     name: "Der Überhang",
     length: 15.5,
     difficulty: "6a+",
-    hallID: "hall1Id"
+    hallID: hall1Id
 });
 
 db.Route.insertMany([
@@ -32,21 +55,21 @@ db.Route.insertMany([
         name: "Direkter Weg",
         length: 12.0,
         difficulty: "5c",
-        hallID: "hall1Id"
+        hallID: hall1Id
     },
     {
         _id: route3Id,
         name: "Dächer Route",
         length: 18.0,
         difficulty: "7b",
-        hallID: "hall2Id"
+        hallID: hall2Id
     },
     {
         _id: route4Id,
         name: "Anfänger Kante",
         length: 10.0,
         difficulty: "4b",
-        hallID: "hall3Id"
+        hallID: hall3Id
     }
 ]);
 
@@ -57,20 +80,20 @@ db.ClimbingHall.insertMany([
         adress: "Klosterstrasse 17, 8406 Winterthur",
         availableEquipment: [
             {
-        id: equipment1h1Id,
-        typ: "Kletterschuhe",
-        price: 5.00
-    },
-    {
-        id: equipmenth12Id,
-        typ: "Klettergurt",
-        price: 4.00
-    },
-    {
-        id: equipmenth14Id,
-        typ: "Chalk Bag",
-        price: 3.00
-    }
+                _id: equipment1h1Id,
+                typ: "Kletterschuhe",
+                price: 5.00
+            },
+            {
+                _id: equipmenth12Id,
+                typ: "Klettergurt",
+                price: 4.00
+            },
+            {
+                _id: equipmenth14Id,
+                typ: "Chalk Bag",
+                price: 3.00
+            }
         ],
         climbers: [climber1Id, climber2Id, climber3Id]
     },
@@ -80,25 +103,25 @@ db.ClimbingHall.insertMany([
         adress: "Aathalstrasse 84, 8610 Uster",
         availableEquipment: [
             {
-        id: equipmenth21Id,
-        typ: "Kletterschuhe",
-        price: 5.00
-    },
-    {
-        id: equipmenth22Id,
-        typ: "Klettergurt",
-        price: 4.00
-    },
-    {
-        id: equipmenth23Id,
-        typ: "Karabiner",
-        price: 2.50
-    },
-    {
-        id: equipmenth25Id,
-        typ: "Seil 60m",
-        price: 8.00
-    },
+                _id: equipmenth21Id,
+                typ: "Kletterschuhe",
+                price: 5.00
+            },
+            {
+                _id: equipmenth22Id,
+                typ: "Klettergurt",
+                price: 4.00
+            },
+            {
+                _id: equipmenth23Id,
+                typ: "Karabiner",
+                price: 2.50
+            },
+            {
+                _id: equipmenth25Id,
+                typ: "Seil 60m",
+                price: 8.00
+            }
         ],
         climbers: [climber1Id, climber4Id]
     },
@@ -108,30 +131,30 @@ db.ClimbingHall.insertMany([
         adress: "Zürcherstrasse 109, 8952 Schlieren",
         availableEquipment: [
             {
-        id: equipmenth31Id,
-        typ: "Kletterschuhe",
-        price: 5.00
-    },
-    {
-        id: equipmenth32Id,
-        typ: "Klettergurt",
-        price: 4.00
-    },
-    {
-        id: equipmenth33Id,
-        typ: "Karabiner",
-        price: 2.50
-    },
-    {
-        id: equipmenth34Id,
-        typ: "Chalk Bag",
-        price: 3.00
-    },
-    {
-        id: equipmenth35Id,
-        typ: "Seil 60m",
-        price: 8.00
-    }
+                _id: equipmenth31Id,
+                typ: "Kletterschuhe",
+                price: 5.00
+            },
+            {
+                _id: equipmenth32Id,
+                typ: "Klettergurt",
+                price: 4.00
+            },
+            {
+                _id: equipmenth33Id,
+                typ: "Karabiner",
+                price: 2.50
+            },
+            {
+                _id: equipmenth34Id,
+                typ: "Chalk Bag",
+                price: 3.00
+            },
+            {
+                _id: equipmenth35Id,
+                typ: "Seil 60m",
+                price: 8.00
+            }
         ],
         climbers: [climber2Id, climber3Id, climber4Id]
     }
@@ -144,20 +167,20 @@ db.Climbers.insertMany([
         age: 28,
         equipmentID: [
             {
-        _id: equipmentc11Id,
-        typ: "Kletterschuhe",
-        price: 129.99
-    },
-    {
-        _id: equipmentc12Id,
-        typ: "Klettergurt",
-        price: 79.99
-    },
-    {
-        _id: equipmentc14Id,
-        typ: "Chalk Bag",
-        price: 19.99
-    },
+                _id: equipmentc11Id,
+                typ: "Kletterschuhe",
+                price: 129.99
+            },
+            {
+                _id: equipmentc12Id,
+                typ: "Klettergurt",
+                price: 79.99
+            },
+            {
+                _id: equipmentc14Id,
+                typ: "Chalk Bag",
+                price: 19.99
+            }
         ],
         completedRoutes: [
             {
@@ -179,15 +202,15 @@ db.Climbers.insertMany([
         age: 32,
         equipmentID: [
             {
-        _id: equipmentc21Id,
-        typ: "Kletterschuhe",
-        price: 129.99
-    },
-    {
-        _id: equipmentc22Id,
-        typ: "Klettergurt",
-        price: 79.99
-    },
+                _id: equipmentc21Id,
+                typ: "Kletterschuhe",
+                price: 129.99
+            },
+            {
+                _id: equipmentc22Id,
+                typ: "Klettergurt",
+                price: 79.99
+            }
         ],
         completedRoutes: [
             {
@@ -204,10 +227,10 @@ db.Climbers.insertMany([
         age: 25,
         equipmentID: [
             {
-        _id: equipmentc31Id,
-        typ: "Kletterschuhe",
-        price: 129.99
-    },
+                _id: equipmentc31Id,
+                typ: "Kletterschuhe",
+                price: 129.99
+            }
         ],
         completedRoutes: [
             {
@@ -234,25 +257,25 @@ db.Climbers.insertMany([
         age: 29,
         equipmentID: [
             {
-        _id: equipmentc41Id,
-        typ: "Kletterschuhe",
-        price: 129.99
-    },
-    {
-        _id: equipmentc42Id,
-        typ: "Klettergurt",
-        price: 79.99
-    },
-    {
-        _id: equipmentc43Id,
-        typ: "Karabiner",
-        price: 14.99
-    },
-    {
-        _id: equipmentc44Id,
-        typ: "Chalk Bag",
-        price: 19.99
-    },
+                _id: equipmentc41Id,
+                typ: "Kletterschuhe",
+                price: 129.99
+            },
+            {
+                _id: equipmentc42Id,
+                typ: "Klettergurt",
+                price: 79.99
+            },
+            {
+                _id: equipmentc43Id,
+                typ: "Karabiner",
+                price: 14.99
+            },
+            {
+                _id: equipmentc44Id,
+                typ: "Chalk Bag",
+                price: 19.99
+            }
         ],
         completedRoutes: [
             {
@@ -266,6 +289,6 @@ db.Climbers.insertMany([
                 difficulty: "7b"
             }
         ],
-        rent: []
+        rent:[]
     }
 ]);
