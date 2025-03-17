@@ -1,3 +1,12 @@
+db.Climbers.updateOne(
+	{
+		"_id": climber1Id
+	},
+	{
+		"$set": {"name": "Stefan"}
+	}
+)
+
 db.Climbers.updateMany(
     { 
         $or: [

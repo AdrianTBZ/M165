@@ -22,3 +22,10 @@ db.Route.find({}, { _id: 0, name: 1, difficulty: 1 });
 db.ClimbingHall.find({ 
     adress: { $regex: "(Winterthur|Uster)" } 
 });
+
+db.Climbers.find({
+	"$or": [
+        { age: { $lt: 30 } },
+        { completedRoutes: { $size: 3 } }
+	]
+})
