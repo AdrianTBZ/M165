@@ -1,0 +1,68 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+  <diagram name="Seite-1" id="Zbd_mD1BBimEMzt7zhM2">
+    <mxGraphModel dx="875" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-6" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;" edge="1" parent="1" source="96OrnSGQLRr0cqlxV0rJ-1" target="96OrnSGQLRr0cqlxV0rJ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-10" value="hat ausrüstung" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="96OrnSGQLRr0cqlxV0rJ-6">
+          <mxGeometry x="0.0359" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="96OrnSGQLRr0cqlxV0rJ-1" target="96OrnSGQLRr0cqlxV0rJ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-9" value="klettert in" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="96OrnSGQLRr0cqlxV0rJ-8">
+          <mxGeometry x="-0.0016" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-1" value="Kletterer" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="180" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="96OrnSGQLRr0cqlxV0rJ-2" target="96OrnSGQLRr0cqlxV0rJ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-14" value="wird geklettert von" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="96OrnSGQLRr0cqlxV0rJ-5">
+          <mxGeometry x="-0.0165" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="96OrnSGQLRr0cqlxV0rJ-2" target="96OrnSGQLRr0cqlxV0rJ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-13" value="Klettert in" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="96OrnSGQLRr0cqlxV0rJ-12">
+          <mxGeometry x="-0.228" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-2" value="Kletterroute" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="430" y="190" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-3" value="Ausrüstung" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="180" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-4" value="Kletterhalle" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="430" y="370" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-11" value="Austrüstung" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="280" y="380" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=none;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="96OrnSGQLRr0cqlxV0rJ-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="338.27883461768124" y="421.4146653845978" as="sourcePoint" />
+            <mxPoint x="429.99572875253784" y="420.00427124746216" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="96OrnSGQLRr0cqlxV0rJ-16" value="vermietet" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="96OrnSGQLRr0cqlxV0rJ-15">
+          <mxGeometry x="-0.2093" y="-2" relative="1" as="geometry">
+            <mxPoint x="13" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
