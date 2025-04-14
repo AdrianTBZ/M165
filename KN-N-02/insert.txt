@@ -1,0 +1,37 @@
+CREATE 
+  // Kletterer (Personen)
+  (k1:Kletterer {id: 1, name: 'Anna Müller', age: 28}),
+  (k2:Kletterer {id: 2, name: 'Tom Weber', age: 32}),
+  (k3:Kletterer {id: 3, name: 'Lisa Schmidt', age: 24}),
+  
+  // Kletterhallen
+  (h1:Kletterhalle {id: 101, name: 'Boulder Planet', adress: 'Hauptstr. 10, Zürich'}),
+  (h2:Kletterhalle {id: 102, name: 'Vertical World', adress: 'Bergweg 5, Bern'}),
+  
+  // Kletterrouten
+  (r1:Kletterroute {id: 201, name: 'Drachenwand', schwierigkeit: '6a'}),
+  (r2:Kletterroute {id: 202, name: 'Überhang-Challenge', schwierigkeit: '6c'}),
+  (r3:Kletterroute {id: 203, name: 'Einsteiger-Paradies', schwierigkeit: '4'}),
+  
+  // Ausrüstung
+  (a1:Ausrüstung {id: 301, typ: 'Klettergurt', price: 15.50}),
+  (a2:Ausrüstung {id: 302, typ: 'Kletterschuhe', price: 12.00}),
+  (a3:Ausrüstung {id: 303, typ: 'Chalkbag', price: 5.00}),
+  
+  // Beziehungen
+  (k1)-[:BEFINDET_SICH_IN {seit: date('2023-01-15')}]->(h1),
+  (k2)-[:BEFINDET_SICH_IN {seit: date('2022-11-03')}]->(h1),
+  (k3)-[:BEFINDET_SICH_IN {seit: date('2023-03-20')}]->(h2),
+  
+  (k1)-[:KLETTERT_IN {datum: date('2023-05-10')}]->(r1),
+  (k1)-[:KLETTERT_IN {datum: date('2023-05-12')}]->(r2),
+  (k2)-[:KLETTERT_IN {datum: date('2023-05-11')}]->(r3),
+  (k3)-[:KLETTERT_IN {datum: date('2023-05-09')}]->(r1),
+  
+  (k1)-[:VERMIETET_AM {datum: date('2023-05-10')}]->(a1),
+  (k1)-[:VERMIETET_AM {datum: date('2023-05-10')}]->(a3),
+  (k2)-[:VERMIETET_AM {datum: date('2023-05-11')}]->(a2),
+  
+  (r1)-[:WIRD_GEKLETTERT_VON]->(h1),
+  (r2)-[:WIRD_GEKLETTERT_VON]->(h1),
+  (r3)-[:WIRD_GEKLETTERT_VON]->(h2)
