@@ -1,0 +1,54 @@
+CREATE 
+(k1:Kletterer {id: 1, name: "Alex Megos", age: 31}),
+(k2:Kletterer {id: 2, name: "Janja Garnbret", age: 25}),
+(k3:Kletterer {id: 3, name: "Adam Ondra", age: 32}),
+(k4:Kletterer {id: 4, name: "Melissa LeNevé", age: 35}),
+
+(r1:Kletterroute {id: 101, name: "Biographie", legit: 9.0, difficulty: "9a+"}),
+(r2:Kletterroute {id: 102, name: "Action Directe", legit: 8.5, difficulty: "9a"}),
+(r3:Kletterroute {id: 103, name: "La Dura Dura", legit: 9.2, difficulty: "9b+"}),
+(r4:Kletterroute {id: 104, name: "Rainbow Rocket", legit: 7.8, difficulty: "7C"}),
+(r5:Kletterroute {id: 105, name: "Golden Gate", legit: 8.2, difficulty: "5.13"}),
+
+(a1:Ausrüstung {id: 201, typ: "Kletterschuhe", price: 159.99}),
+(a2:Ausrüstung {id: 202, typ: "Klettergurt", price: 89.95}),
+(a3:Ausrüstung {id: 203, typ: "Chalk Bag", price: 24.99}),
+(a4:Ausrüstung {id: 204, typ: "Sicherungsgerät", price: 49.95}),
+
+(h1:Kletterhalle {id: 301, name: "Boulder Factory", adress: "Hauptstraße 42, Berlin"}),
+(h2:Kletterhalle {id: 302, name: "Climbing World", adress: "Bergweg 15, München"}),
+(h3:Kletterhalle {id: 303, name: "Alpine Center", adress: "Felsenweg 8, Hamburg"}),
+
+(k1)-[:KLETTERT_IN {klettert_in: "2023-04-15"}]->(h1),
+(k1)-[:KLETTERT_IN {klettert_in: "2023-06-22"}]->(h2),
+(k2)-[:KLETTERT_IN {klettert_in: "2023-05-10"}]->(h2),
+(k3)-[:KLETTERT_IN {klettert_in: "2023-07-05"}]->(h3),
+(k4)-[:KLETTERT_IN {klettert_in: "2023-03-18"}]->(h1),
+(k4)-[:KLETTERT_IN {klettert_in: "2023-08-30"}]->(h3),
+
+(k1)-[:WIRD_GEKLETTERT_VON {geklettert_am: "2023-02-18"}]->(r2),
+(k1)-[:WIRD_GEKLETTERT_VON {geklettert_am: "2023-03-25"}]->(r4),
+(k2)-[:WIRD_GEKLETTERT_VON {geklettert_am: "2023-01-12"}]->(r1),
+(k2)-[:WIRD_GEKLETTERT_VON {geklettert_am: "2023-05-30"}]->(r5),
+(k3)-[:WIRD_GEKLETTERT_VON {geklettert_am: "2022-12-10"}]->(r3),
+(k4)-[:WIRD_GEKLETTERT_VON {geklettert_am: "2023-04-05"}]->(r4),
+
+(k1)-[:HAT_AUSRÜSTUNG]->(a1),
+(k1)-[:HAT_AUSRÜSTUNG]->(a3),
+(k2)-[:HAT_AUSRÜSTUNG]->(a2),
+(k2)-[:HAT_AUSRÜSTUNG]->(a4),
+(k3)-[:HAT_AUSRÜSTUNG]->(a1),
+(k3)-[:HAT_AUSRÜSTUNG]->(a2),
+(k3)-[:HAT_AUSRÜSTUNG]->(a3),
+(k4)-[:HAT_AUSRÜSTUNG]->(a4),
+
+(r1)-[:BEFINDET_SICH_IN]->(h1),
+(r2)-[:BEFINDET_SICH_IN]->(h2),
+(r3)-[:BEFINDET_SICH_IN]->(h3),
+(r4)-[:BEFINDET_SICH_IN]->(h1),
+(r5)-[:BEFINDET_SICH_IN]->(h2),
+
+(a1)-[:VERMIETET {vermietet_am: "2023-01-15"}]->(h1),
+(a2)-[:VERMIETET {vermietet_am: "2023-02-20"}]->(h1),
+(a3)-[:VERMIETET {vermietet_am: "2023-03-10"}]->(h2),
+(a4)-[:VERMIETET {vermietet_am: "2023-04-25"}]->(h3);
