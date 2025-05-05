@@ -79,3 +79,101 @@ db.Route.aggregate([
 ```
 
 ![join](Images/join_lookup.png)
+
+## $lookup
+
+```
+db.Climbers.aggregate([
+  {
+    $lookup: {
+      from: "Route",
+      localField: "completedRoutes.routeID",
+      foreignField: "_id",
+      as: "routenDetails"
+    }
+  },
+  {
+    $match: {
+      "routenDetails.difficulty": { $gte: "6a+" }
+    }
+  },
+  {
+    $addFields: {
+      "anzahlRouten": { $size: "$routenDetails" },
+      "gesamtKletterlänge": { $sum: "$routenDetails.length" }
+    }
+  },
+  {
+    $project: {
+      "name": 1,
+      "age": 1,
+      "anzahlRouten": 1,
+      "gesamtKletterlänge": 1,
+      "schwierigsteRoute": { $max: "$routenDetails.difficulty" }
+    }
+  },
+  {
+    $sort: { "gesamtKletterlänge": -1 }
+  }
+])
+```
+
+![lookup](Images/lookup.png)
+
+
+# Aufgabe C
+
+## Einzelne Felder der Unterdokumente
+```
+db.Climbers.find({}, 
+  { 
+    "name": 1, 
+    "equipmentID.typ": 1, 
+    "equipmentID.price": 1,
+    "_id": 0 
+  }
+)
+```
+
+![Einzelne Felder](Images/einzelne_Felder_Unterdokumente.png)
+
+
+## Unterdokumente filtern
+
+```	
+db.Climbers.find(
+  { 
+    "equipmentID": { 
+      $elemMatch: { 
+        "typ": "Kletterschuhe", 
+        "price": { $gt: 100 } 
+      } 
+    } 
+  },
+  {
+    "name": 1,
+    "equipmentID.$": 1
+  }
+)
+```
+
+![Unterdokumente filtern](Images/Unterdokumente_filtern.png)
+
+
+## $unwind
+
+```
+db.Climbers.aggregate([
+  { $unwind: "$completedRoutes" },
+  { 
+    $project: { 
+      "name": 1, 
+      "route": "$completedRoutes.routeID", 
+      "datum": "$completedRoutes.date", 
+      "schwierigkeit": "$completedRoutes.difficulty" 
+    } 
+  }
+])
+```
+
+![unwind](Images/unwind.png)
